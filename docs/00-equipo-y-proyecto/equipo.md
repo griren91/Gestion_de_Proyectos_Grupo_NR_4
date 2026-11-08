@@ -7,7 +7,7 @@
 | Gabriel Ivan Sosa Capelli | Sistemas Embebidos | [COMPLETAR] |
 | Gabriel Eduardo Nuñez | Sistemas Embebidos| [COMPLETAR] |
 | Lucia Urrestarazu |Desarrollo de Productos Medicos | [COMPLETAR] |
-| Renzo Grilletti |Sistemas Embebidos| [COMPLETAR] |
+| Renzo Grilletti |Sistemas Embebidos| Soporte Ingenieria Clinica|
 
 ## Equipo Nº
 
