@@ -7,7 +7,7 @@
 
 ```mermaid
 mindmap
-  root(("Sistema perimetral"))
+  root(("Sistema de Seguridad Integral"))
     1. E1 Ingeniería de Detalle
       1.1 Relevamiento y planos
       1.2 Diseño red, UPS y NVR
