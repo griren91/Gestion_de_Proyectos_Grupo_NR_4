@@ -1,4 +1,4 @@
-# Cronograma del Proyecto
+# 📅 Cronograma del Proyecto
 
 > Proyecto: Sistema integrado de detección de intrusiones y videovigilancia perimetral. Inicio: 2027-03-01. Fin: 2027-06-28. Duración: 86 días hábiles. Calendario: lunes a viernes, fines de semana excluidos. Las fechas son las previstas del proyecto, no las del curso.
 
