@@ -1,4 +1,4 @@
-# Estimación
+# 🎲 Estimación
 
 > **Técnica principal:** Delphi · **Rondas realizadas:** 2 · **Estimadores:** Renzo (Líder / Gestión), Gabriel S. (Infraestructura), Lucía (Sistemas), Gabriel N. (Detección)
 > **Unidad:** horas-persona del equipo integrador. No incluye horas de la cuadrilla externa ni horas de la Central de Monitoreo, que se supervisan pero no se estiman por Delphi.
