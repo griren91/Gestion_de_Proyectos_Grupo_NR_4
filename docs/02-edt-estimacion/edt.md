@@ -1,4 +1,4 @@
-#🌳 Estructura de Desglose del Trabajo (EDT / WBS)
+# 🌳 Estructura de Desglose del Trabajo (EDT / WBS)
 
 > Proyecto: Sistema integrado de detección de intrusiones y videovigilancia perimetral — Concesionaria de maquinaria pesada, NEA. Empresa integradora Equipo 4.
 > Los entregables del primer nivel provienen de `entregables.md` (Tarea 2, E1 a E5). La EDT cubre el 100% del alcance y nada más. La Gestión del Proyecto se incluye como paquete de apoyo, no como entregable para el cliente.
