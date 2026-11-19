@@ -29,7 +29,7 @@ flowchart LR
     T53 --> G63["6.3 Cierre<br/>2d"]
     G63 --> FIN(["Fin"])
 
-    style G61 fill:#FFCDD2,stroke:#C62828
+    style G61 fill:#FFCDD3,stroke:#C62828
     style T11 fill:#FFCDD2,stroke:#C62828
     style T12 fill:#FFCDD2,stroke:#C62828
     style T13 fill:#FFCDD2,stroke:#C62828
