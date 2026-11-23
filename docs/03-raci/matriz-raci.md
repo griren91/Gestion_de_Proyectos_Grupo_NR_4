@@ -1,8 +1,6 @@
 # 👥 Matriz RACI — Versión probable
 ## Sistema integrado de detección de intrusiones y videovigilancia perimetral · Equipo 4 · Gestión de Proyectos · FIUNER
 
-> **Base:** Documento **Tarea3_EDT_y_estimaciones_G4_vf.docx** — EDT de 26 paquetes, **858 h**, **48 días hábiles, 01/03/2027 a 10/05/2027**, y roles de la Tarea 2.
-> **Corrección:** la versión anterior de este archivo usaba por error los valores viejos (1058 h / 58 días / cierre 24/05). Esta versión está corregida al documento vf.
 > **Regla:** **R** = Responsable (ejecuta) · **A** = Aprobador (único por paquete, responde por el resultado) · **C** = Consultado (se le pregunta antes) · **I** = Informado (se le avisa después) · **R/A** = ejecuta y aprueba (solo en gestión) · **—** = sin participación.
 > **Verificación:** cada fila tiene exactamente **1 A** y al menos **1 R**.
 
