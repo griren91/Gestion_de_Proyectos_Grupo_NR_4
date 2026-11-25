@@ -34,9 +34,53 @@ Trabajamos con un proveedor habitual. El equipo ya conoce su app y su software d
 
 ## 2. Estructura de desglose del trabajo (EDT)
 
+> Proyecto: Sistema integrado de detección de intrusiones y videovigilancia perimetral — Concesionaria de maquinaria pesada, NEA. Empresa integradora Equipo 4.
+> Los entregables del primer nivel provienen de la Tarea 2 (E1 a E5). La EDT cubre el 100% del alcance y nada más. La Gestión del Proyecto se incluye como paquete de apoyo, no como entregable para el cliente.
+
 La EDT se armó en tres pasos. Primero listamos todo el trabajo necesario para construir el sistema y gestionar el proyecto. Después lo agrupamos por los cinco entregables de la Tarea 2, que forman el primer nivel, más un sexto grupo de gestión del proyecto. Por último descompusimos cada entregable en paquetes de trabajo que tienen un responsable y un resultado verificable. El orden de los paquetes sigue las cuatro fases del ciclo de vida híbrido: los entregables E1, E2, E4 y E5 son predictivos y el E3, de calibración, es iterativo.
 
-**Figura 1: EDT del proyecto. En rojo, los paquetes del camino crítico.**
+### Diagrama de la EDT
+
+```mermaid
+mindmap
+  root(("Sistema de Seguridad Integral"))
+    1. E1 Ingeniería
+      1.1 Relevamiento del predio y zonas críticas
+      1.2 Diseño de detección y cobertura de cámaras
+      1.3 Ingeniería de red, canalizaciones y energía
+      1.4 Confirmación de versión y compra de licencias
+      1.5 Coordinación técnica con la central de monitoreo
+      1.6 Pliego de montaje y contratación de la cuadrilla
+      1.7 Presupuesto final, aprobación y órdenes de compra
+    2. E2 Infraestructura
+      2.1 Recepción de equipos y licencias
+      2.2 Zanjeo y canalizaciones
+      2.3 Tendido de cableado exterior
+      2.4 Postes y montaje de cámaras y sensores
+      2.5 Instalación de rack y UPS
+      2.6 Conexionado y prueba de comunicación
+    3. E3 Sistema Lógico
+      3.1 Instalación y activación del VMS
+      3.2 Configuración de app y perfiles de usuario
+      3.3 Calibración de sensores en sitio
+      3.4 Integración y pruebas con la central
+      3.5 Observación de 7 días corridos sin falsas alarmas
+    4. E4 Documentación
+      4.1 Planos conforme a obra
+      4.2 Manuales de usuario y guía administrativa
+      4.3 Capacitación de usuarios
+    5. E5 Recepción
+      5.1 Simulacro de intrusión y prueba de autonomía
+      5.2 Acta de recepción, garantía y traspaso de soporte
+    6. Gestión del Proyecto
+      6.1 Planificación del proyecto
+      6.2 Seguimiento y control
+      6.3 Cierre del proyecto
+```
+
+**Figura 1: EDT del proyecto — 26 paquetes de trabajo.**
+
+> En el diagrama del documento Word, los paquetes del camino crítico van en rojo: 6.1 → 1.1 → 1.3 → 1.6 → 1.7 → 2.1 → 2.4 → 2.6 → 3.3 → 3.4 → 3.5 → 4.3 → 5.2 → 6.3. En el mindmap de arriba no se puede pintar por rama, por eso el camino crítico se indica en la sección 4 de Red de tareas.
 
 Camino crítico (holgura 0): 6.1 → 1.1 → 1.3 → 1.6 → 1.7 → 2.1 → 2.4 → 2.6 → 3.3 → 3.4 → 3.5 → 4.3 → 5.2 → 6.3.
 
