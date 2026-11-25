@@ -1,91 +1,87 @@
-# 🌳 Estructura de Desglose del Trabajo (EDT / WBS)
+# Tarea 3 — EDT y estimaciones
+## Sistema integrado de detección de intrusiones y videovigilancia perimetral · Equipo 4 · Gestión de Proyectos · FIUNER
 
-> Proyecto: Sistema integrado de detección de intrusiones y videovigilancia perimetral — Concesionaria de maquinaria pesada, NEA. Empresa integradora Equipo 4.
-> Los entregables del primer nivel provienen de `entregables.md` (Tarea 2, E1 a E5). La EDT cubre el 100% del alcance y nada más. La Gestión del Proyecto se incluye como paquete de apoyo, no como entregable para el cliente.
+> **Fuente:** Documento `Tarea3_EDT_y_estimaciones_G4_vf.docx` (versión final del grupo).
+> **En resumen.** La EDT parte de los cinco entregables de la Tarea 2 y suma la gestión del proyecto: 26 paquetes de trabajo. El esfuerzo total estimado es de **858 horas**. Con el equipo a tiempo completo y una cuadrilla externa de cuatro operarios, el proyecto dura **48 días hábiles: empieza el 1 de marzo y termina el 10 de mayo de 2027**. El camino crítico pasa por la ingeniería de red, la entrega de los equipos por parte de los proveedores, el montaje y la calibración en el sitio.
+> **Costos:** no se incluyen en esta entrega (punto opcional de la consigna, no realizado).
 
-## Diagrama de la EDT
+## 1. Quiénes somos y qué incluye el proyecto
 
-```mermaid
-mindmap
-  root(("Sistema de Seguridad Integral"))
-    1. E1 Ingeniería de Detalle
-      1.1 Relevamiento y planos
-      1.2 Diseño red, UPS y NVR
-      1.3 Cotizaciones, pliego y OC
-      1.4 Coordinación Central
-    2. E2 Infraestructura Física
-      2.1 Zanjeo y canalizaciones
-      2.2 Tendido cableado UV
-      2.3 Montaje postes, cámaras y sensores
-      2.4 Rack, UPS y ping 100%
-    3. E3 Sistema Lógico y Calibración
-      3.1 NVR, VMS y usuarios app
-      3.2 Calibración iterativa sensores
-      3.3 Pruebas Central + 7 días sin falsas alarmas
-    4. E4 Documentación y Capacitación
-      4.1 Planos conforme a obra
-      4.2 Manuales
-      4.3 Capacitación + actas
-    5. E5 Recepción y Garantía
-      5.1 Simulacros diurno y nocturno
-      5.2 Prueba corte y autonomía UPS
-      5.3 Acta Recepción + garantía 12 meses
-    6. Gestión del Proyecto
-      6.1 Planificación y línea base
-      6.2 Seguimiento y control
-      6.3 Cierre administrativo
-```
+Somos una empresa integradora. No somos parte de la concesionaria: la concesionaria nos contrata para diseñar, comprar, dirigir la instalación y poner en marcha el sistema. Integramos equipos y servicios de terceros (cámaras, sensores, UPS, cuadrilla de obra, central de monitoreo y software) en una solución que funcione en este predio.
 
-> **Regla del 100%:** la suma de los paquetes de trabajo es exactamente el alcance. No hay trabajo fuera de la EDT, y no hay entregables fuera del alcance de la Tarea 2.
+El software es enlatado. La plataforma de gestión de video (VMS) y la app no las desarrollamos: compramos licencias a un proveedor y las configuramos para el cliente. Eso suma un actor externo más al proyecto, con su plazo de entrega, sus condiciones de licencia y su soporte técnico.
 
-## Cómo leer esta EDT
+Trabajamos con un proveedor habitual. El equipo ya conoce su app y su software de calibración, por eso no hay que elegir proveedor y la configuración y la calibración llevan menos tiempo.
 
-- **Nivel 1 = entregables E1 a E5 + Gestión.** Los E1 a E5 son lo que recibe y firma el cliente. Gestión es trabajo interno necesario para dirigir el proyecto.
-- **Nivel 2 = paquetes de trabajo.** Es la unidad que se estima, se asigna y se controla. Cada paquete tiene un responsable primario, una descripción y un criterio de completitud verificable.
-- **No se confunde entregable con actividad.** Por ejemplo, E2 no es 'trabajar en el patio', es infraestructura montada, energizada y con ping verificado.
-- **Exclusiones que NO están en la EDT:** obra civil mayor y albañilería, abono mensual de monitoreo, sereno o custodia presencial, provisión de celulares/tablets, y ampliación a depósitos no contemplados. Cualquier pedido de ese tipo es un cambio Nivel 3 y requiere adenda.
+### Consecuencias del software enlatado en la planificación
 
-## Diccionario de la EDT
+- **Licencias (1.4):** no se elige proveedor; se confirma que la versión vigente sea compatible con las cámaras y el grabador, y se calcula y cotiza la cantidad de licencias.
+- **Plazo de entrega (2.1):** las licencias entran en el mismo seguimiento que el hardware.
+- **Activación (3.1):** la instalación se hace con asistencia remota del proveedor; si su soporte demora, se atrasa la Fase 3.
+- **Manuales (4.2) y cierre (5.2):** el cliente recibe los datos de contacto del soporte y el contrato de licencias y soporte queda a su nombre. Después de la entrega, las consultas sobre el software las atiende el proveedor.
+- **Seguimiento (6.2):** el proveedor del software se suma a la coordinación con los demás proveedores, la cuadrilla y la central.
+- **Riesgo de proveedor único:** al no cotizar alternativas, el proyecto depende de un solo proveedor de software. Si cambia precios, discontinúa el producto o demora el soporte, no hay un reemplazo evaluado. Se registra en el registro de riesgos y se justifica ante el cliente en la ingeniería de detalle (E1): experiencia previa, menor riesgo técnico y menor plazo.
 
-| ID | Paquete de trabajo | Entregable asociado | Descripción | Criterio de completitud | Responsable |
-|----|-------------------|---------------------|-------------|------------------------|-------------|
-| 6.1 | Planificación y línea base | Gestión | Planificación y línea base: acta de inicio, EDT, cronograma base, registro de riesgos y plan de comunicación. Deja fija la línea base de alcance, costo y plazo al salir de Fase 1. | Línea base aprobada por el equipo y cronograma base firmado en reunión de sincronización. | Renzo |
-| 1.1 | Relevamiento planimétrico y planos de tendido | E1 | Relevamiento planimétrico del patio y galpones, identificación de puntos ciegos, zonas críticas y recorridos. Plano de tendido y ubicación de postes, cámaras y sensores. | Plano de tendido v1 aprobado internamente, con 100% de zonas críticas relevadas y puntos ciegos identificados. | Gabriel S. |
-| 1.2 | Diseño de red, cálculo UPS y dimensionamiento NVR | E1 | Diseño de red exterior, cálculo eléctrico de UPS para autonomía 8 h o más, dimensionamiento del NVR para retención 30 días y selección de equipos IP66/IK10. | Memoria de cálculo UPS y dimensionamiento NVR revisados, con equipos seleccionados y justificados. | Gabriel S. |
-| 1.3 | Cotizaciones, pliego de montaje y órdenes de compra | E1 | Solicitud de cotizaciones a proveedores, comparación, pliego de montaje para la cuadrilla y emisión de órdenes de compra firmes. Incluye 5 días de espera de cotizaciones dentro de los 10 días de duración. | Órdenes de compra emitidas y confirmadas por proveedores, con pliego entregado a la cuadrilla. | Renzo |
-| 1.4 | Coordinación previa protocolo con Central de Monitoreo | E1 | Coordinación previa con la Central de Monitoreo Externa: protocolo de comunicación, formato de señal, tiempos de aviso 30 s o menos y datos de contacto. | Protocolo homologado por escrito con la central, con responsable y canal de prueba definidos. | Gabriel N. |
-| 2.1 | Zanjeo y canalizaciones (cuadrilla externa) | E2 | Zanjeo perimetral y colocación de tritubos/caños por cuadrilla externa, bajo supervisión de Gabriel S. Esfuerzo del equipo = supervisión, duración = cuadrilla a tiempo completo. | Canalizaciones terminadas y verificadas según plano, con acta de supervisión firmada. | Gabriel S. |
-| 2.2 | Tendido de cableado UV | E2 | Tendido de cableado de red exterior UV, identificación y ordenamiento en rack. Supervisión del equipo, ejecución por cuadrilla. | Cableado tendido, etiquetado y con continuidad verificada tramo por tramo. | Gabriel S. |
-| 2.3 | Montaje de postes, cámaras y sensores | E2 | Fijación de postes y montaje mecánico de cámaras IP y sensores perimetrales, energización y ajuste mecánico de ángulos. | 100% de dispositivos montados, fijados y energizados según plano. | Gabriel S. |
-| 2.4 | Instalación rack y UPS + prueba ping 100% | E2 | Instalación de rack y UPS en galpón, conexionado, energización y prueba de ping al 100% de dispositivos. | Acta de Montaje Físico firmada + 100% de dispositivos con ping exitoso. | Gabriel S. |
-| 3.1 | Configuración NVR/VMS y matriz usuarios app (Ley 25.326) | E3 | Configuración de NVR y VMS, creación de matriz de usuarios y perfiles en app móvil según Ley 25.326, permisos por rol y aviso por sector. | NVR/VMS configurados, matriz de usuarios activa y app con aviso que indica el sector. | Lucía |
-| 3.2 | Calibración iterativa de sensores en terreno | E3 | Calibración iterativa de sensores en terreno: ensayos de cruce, ajuste de sensibilidad y filtros por viento, ramas y sombras de maquinaria. Se empieza por un sector y se replica lo aprendido. | Sensores calibrados por sector, con registro de ajustes y falsas alarmas por iteración. | Gabriel N. |
-| 3.3 | Pruebas de disparo con Central + 7 días sin falsas alarmas | E3 | Pruebas de disparo con la Central Externa y período de observación de 7 días corridos en intemperie. Duración = calendario de observación, esfuerzo = monitoreo y registro. | Informe de 7 días corridos sin falsas alarmas + acuse de recibo de la central. | Gabriel N. |
-| 4.1 | Planos conforme a obra | E4 | Planos conforme a obra: actualización de planos con lo realmente ejecutado, recorridos reales y ubicación final de equipos. | Planos conforme a obra entregados y firmados por Gabriel S. | Gabriel S. |
-| 4.2 | Manual de usuario y guía administrativa | E4 | Manual de usuario para sereno y guía administrativa para gerencia/administración, con procedimientos de aviso, revisión de video y gestión de usuarios. | Manuales entregados en formato acordado, con versión y fecha. | Lucía |
-| 4.3 | Capacitación sereno y administración + actas | E4 | Capacitación a sereno y administración: uso de app, revisión de cámaras, respuesta ante aviso y prueba de simulacro guiado. | Jornadas concluidas con actas firmadas por los usuarios capacitados. | Lucía |
-| 5.1 | Simulacros diurno y nocturno de intrusión | E5 | Simulacros de intrusión diurno y nocturno, con registro de detección, tiempo de aviso y respuesta. | Simulacros exitosos con detección en 100% de zonas críticas y aviso en 30 s o menos. | Gabriel N. |
-| 5.2 | Prueba de corte y autonomía real UPS 8h | E5 | Prueba de corte de energía y autonomía real de UPS: corte controlado, medición de autonomía y verificación de grabación continua. | Autonomía real de 8 h o más verificada y registrada, con grabación continua durante el corte. | Gabriel S. |
-| 5.3 | Acta de Recepción Definitiva y garantía 12 meses | E5 | Acta de Recepción Definitiva y garantía: documento de cierre contractual, transferencia de administración y póliza de garantía 12 meses. | Acta de Recepción Definitiva firmada por la Gerencia de la concesionaria. | Renzo |
-| 6.2 | Seguimiento y control + gestión de riesgos | Gestión | Seguimiento semanal 45 min, actualización de tablero Kanban, revisión de registro de riesgos y control de cambios Nivel 1/2/3. Transversal a todo el proyecto. | Actas de reuniones semanales y tablero actualizado, con riesgos revisados. | Renzo |
-| 6.3 | Cierre administrativo del proyecto | Gestión | Cierre administrativo: archivo de documentación, lecciones aprendidas, cierre de órdenes de compra y liberación de recursos. | Carpeta de cierre completa y lecciones aprendidas registradas. | Renzo |
+### Supuestos de planificación
 
-## Trazabilidad fase, entregable y compuerta
+- **Inicio del proyecto:** lunes 1 de marzo de 2027. Jornada de 8 horas, de lunes a viernes; se excluyen los feriados nacionales del período (24/3, 26/3, 2/4 y 25/5).
+- El equipo de la empresa integradora trabaja a tiempo completo en el proyecto (dedicación del 100 %). Las excepciones son el seguimiento y control y el período de observación, con dedicación parcial.
+- La obra pesada (zanjeo, cableado y postes) la ejecuta una cuadrilla externa de cuatro operarios a tiempo completo. Gabriel S. la supervisa en forma parcial, dentro de esos mismos paquetes.
+- El plazo de entrega de equipos y licencias lo fijan los proveedores; se estimó con PERT (sección 3.6 de estimaciones).
+- El software enlatado es del proveedor habitual de la empresa: el equipo ya conoce la app y el software de calibración.
+- Las duraciones se redondean hacia arriba a días enteros.
+- Los costos (punto opcional de la consigna) no se incluyen en esta entrega.
 
-| Fase | Entregables | Compuerta de salida (Quality Gate) |
-|------|-------------|-----------------------------------|
-| Fase 1: Inicio e Ingeniería (predictiva) | E1 | Plan de Ingeniería Aprobado por Cliente + Órdenes de Compra emitidas |
-| Fase 2: Montaje Físico (predictiva) | E2 | Acta de Montaje Físico firmada + 100% de dispositivos con ping exitoso |
-| Fase 3: Integración y Calibración (iterativa) | E3 | Informe: 7 días corridos sin falsas alarmas + enlace con central verificado |
-| Fase 4: Cierre y Capacitación (predictiva) | E4 + E5 | Acta de Recepción Definitiva firmada por la Gerencia |
+## 2. Estructura de desglose del trabajo (EDT)
 
-## Supuestos de la EDT
+La EDT se armó en tres pasos. Primero listamos todo el trabajo necesario para construir el sistema y gestionar el proyecto. Después lo agrupamos por los cinco entregables de la Tarea 2, que forman el primer nivel, más un sexto grupo de gestión del proyecto. Por último descompusimos cada entregable en paquetes de trabajo que tienen un responsable y un resultado verificable. El orden de los paquetes sigue las cuatro fases del ciclo de vida híbrido: los entregables E1, E2, E4 y E5 son predictivos y el E3, de calibración, es iterativo.
 
-- Equipo de 4 integrantes con dedicación 10 a 15 h semanales por persona. Para la planificación se usa 15 h/semana = 3 h/día hábil por persona.
-- La mano de obra física pesada (zanjeo, tendido, fijación) la ejecuta la cuadrilla externa. El esfuerzo del equipo en E2 es supervisión técnica, no ejecución.
-- La calibración en Fase 3 es iterativa: se prueba en un sector, se ajusta y se replica al resto. Por eso 3.2 y 3.3 tienen duración por calendario además de esfuerzo.
-- Los 5 entregables son llave en mano: la entrega física es única, pero la validación es incremental por hitos.
+**Figura 1: EDT del proyecto. En rojo, los paquetes del camino crítico.**
+
+Camino crítico (holgura 0): 6.1 → 1.1 → 1.3 → 1.6 → 1.7 → 2.1 → 2.4 → 2.6 → 3.3 → 3.4 → 3.5 → 4.3 → 5.2 → 6.3.
+
+Estructura por entregable:
+
+- **E1 Ingeniería (1.1 a 1.7):** Relevamiento, Diseño de detección, Ingeniería de red, Licencias, Central, Pliego y cuadrilla, Presupuesto y aprobación.
+- **E2 Infraestructura (2.1 a 2.6):** Recepción, Zanjeo, Cableado, Postes y montaje, Rack y UPS, Conexionado.
+- **E3 Sistema lógico (3.1 a 3.5):** VMS, App y perfiles, Calibración, Integración con central, Observación 7 días.
+- **E4 Documentación (4.1 a 4.3):** Planos conforme a obra, Manuales, Capacitación.
+- **E5 Recepción (5.1 a 5.2):** Simulacro y autonomía, Acta de recepción.
+- **Gestión (6.1 a 6.3):** Planificación, Seguimiento y control, Cierre.
+
+### Diccionario de la EDT
+
+| ID | Paquete de trabajo | Entregable | Responsable | Descripción | Criterio de completitud |
+| --- | --- | --- | --- | --- | --- |
+| 1.1 | Relevamiento del predio y zonas críticas | E1 Ingeniería | Gabriel S. | Recorrido del patio, accesos y galpones; medición de distancias, puntos de energía y red; registro fotográfico y acuerdo de zonas críticas con el cliente. | Plano de relevamiento con zonas críticas validadas por el cliente. |
+| 1.2 | Diseño de detección y cobertura de cámaras | E1 Ingeniería | Gabriel N. | Ubicación y tipo de sensores perimetrales y cámaras, ángulos de visión, análisis de puntos ciegos por movimiento de maquinaria. | Plano de cobertura con 100 % de zonas críticas cubiertas y listado de equipos. |
+| 1.3 | Ingeniería de red, canalizaciones y energía | E1 Ingeniería | Gabriel S. | Trazado de canalizaciones, cálculo de enlaces y cableado exterior, dimensionamiento del rack y cálculo de autonomía de la UPS (≥ 8 h). | Planos de canalización y diagrama de red; memoria de cálculo de UPS revisada. |
+| 1.4 | Confirmación de versión y compra de licencias | E1 Ingeniería | Lucía | Con el proveedor habitual de software: verificación de que la versión vigente del VMS y la app es compatible con las cámaras y el grabador elegidos, cálculo de licencias (retención de 30 días) y cotización con las condiciones de soporte. | Versión confirmada, cotización de licencias y condiciones de soporte vigentes. |
+| 1.5 | Coordinación técnica con la central de monitoreo | E1 Ingeniería | Gabriel N. | Definición con la central del protocolo de comunicación, eventos a transmitir, identificación de sectores y prueba de enlace prevista. | Protocolo y lista de eventos acordados por escrito con la central. |
+| 1.6 | Pliego de montaje y contratación de la cuadrilla | E1 Ingeniería | Gabriel S. | Pliego técnico de zanjeo, tendido y postes; pedido de cotización, comparación y contratación de la cuadrilla externa. | Cuadrilla contratada con pliego y fechas firmados. |
+| 1.7 | Presupuesto final, aprobación y órdenes de compra | E1 Ingeniería | Renzo | Consolidación del documento de ingeniería, presupuesto final con contingencia, presentación al cliente y emisión de órdenes de compra de equipos y licencias. | Ingeniería aprobada por escrito y órdenes de compra emitidas (Hito 1). |
+| 2.1 | Recepción de equipos y licencias | E2 Infraestructura | Renzo | Seguimiento de proveedores de hardware y del software enlatado hasta la entrega; control de cantidades y estado. La duración depende del plazo de entrega del proveedor. | Equipos y licencias recibidos y controlados contra las órdenes de compra. |
+| 2.2 | Zanjeo y canalizaciones | E2 Infraestructura | Gabriel S. | Apertura de zanjas perimetrales, colocación de caños y cámaras de paso según pliego, bajo supervisión de Gabriel S. | Canalizaciones completas e inspeccionadas según planos. |
+| 2.3 | Tendido de cableado exterior | E2 Infraestructura | Gabriel S. | Tendido de cable de red exterior con protección UV y de alimentación hasta cada punto. | Cableado tendido y rotulado; continuidad verificada en el 100 % de los tramos. |
+| 2.4 | Postes y montaje de cámaras y sensores | E2 Infraestructura | Gabriel S. | Fijación de postes y soportes, montaje mecánico de cámaras IP y sensores perimetrales, conexión a la red. | Equipos montados y energizados en todas las posiciones del plano. |
+| 2.5 | Instalación de rack y UPS | E2 Infraestructura | Gabriel S. | Armado del rack en el galpón, switches, grabador (NVR) y UPS; tablero eléctrico de alimentación. | Rack y UPS instalados y energizados. |
+| 2.6 | Conexionado y prueba de comunicación | E2 Infraestructura | Gabriel S. | Conexionado final y prueba de comunicación de cada dispositivo con el rack. | Acta de montaje firmada y 100 % de equipos con comunicación de red comprobada (Hito 2). |
+| 3.1 | Instalación y activación del VMS | E3 Sistema lógico | Lucía | Instalación del software enlatado de gestión de video, activación de licencias, alta de cámaras y grabación con retención de 30 días, con asistencia remota del proveedor. | Todas las cámaras grabando en el VMS con licencias activas. |
+| 3.2 | Configuración de app y perfiles de usuario | E3 Sistema lógico | Lucía | Configuración de la app del proveedor, avisos con indicación de sector y perfiles y permisos de usuario según la Ley 25.326. | Matriz de usuarios cargada y avisos de prueba recibidos en la app. |
+| 3.3 | Calibración de sensores en sitio | E3 Sistema lógico | Gabriel N. | Ciclos de prueba y ajuste de sensibilidad, filtros y zonas de detección con el software de calibración del proveedor, que el equipo ya conoce; tratamiento de sombras de maquinaria y condiciones climáticas. | Ensayos de cruce detectados en todas las zonas sin disparos por clima o maquinaria. |
+| 3.4 | Integración y pruebas con la central | E3 Sistema lógico | Gabriel N. | Pruebas de disparo de punta a punta: sensor, alarma sonora, central de monitoreo y app, midiendo el tiempo de aviso (≤ 30 s). | Acuse de la central en todas las zonas y tiempos de aviso dentro de la meta. |
+| 3.5 | Observación de 7 días corridos sin falsas alarmas | E3 Sistema lógico | Gabriel N. | Funcionamiento continuo durante 7 días corridos con registro diario de eventos. Si aparece una falsa alarma se ajusta y el período se reinicia. | Informe de 7 días seguidos sin falsas alarmas (Hito 3). |
+| 4.1 | Planos conforme a obra | E4 Documentación | Gabriel S. | Actualización de planos de canalización, red y ubicación de equipos según lo efectivamente instalado. | Planos conforme a obra entregados al cliente. |
+| 4.2 | Manuales de usuario y guía administrativa | E4 Documentación | Lucía | Adaptación de los manuales del proveedor: manual del sereno, guía para administración y gerencia, y datos de contacto del soporte del proveedor del software. | Manuales revisados y entregados. |
+| 4.3 | Capacitación de usuarios | E4 Documentación | Lucía | Jornadas de capacitación al sereno, administración y gerencia sobre la app, el VMS y la respuesta a eventos. | Actas de capacitación firmadas por los asistentes. |
+| 5.1 | Simulacro de intrusión y prueba de autonomía | E5 Recepción | Gabriel N. | Simulacro diurno y nocturno con el cliente y la central; corte de energía para verificar la autonomía real de la UPS. | Simulacro exitoso y autonomía ≥ 8 h verificada. |
+| 5.2 | Acta de recepción, garantía y traspaso de soporte | E5 Recepción | Renzo | Firma del acta de recepción, entrega de la póliza de garantía y traspaso al cliente del contrato de soporte y licencias del software enlatado. | Acta de recepción definitiva firmada por la gerencia (Hito 4). |
+| 6.1 | Planificación del proyecto | Gestión | Renzo | Acta de constitución, plan del proyecto, línea base de alcance, costo y cronograma, registro de riesgos y calendario de reuniones. | Plan y línea base aprobados por la gerencia del cliente. |
+| 6.2 | Seguimiento y control | Gestión | Renzo | Reunión semanal, control de avance y costos, gestión de cambios (Nivel 3), riesgos y coordinación con proveedores, cuadrilla, central y proveedor del software. | Informes semanales emitidos y cambios registrados hasta la recepción. |
+| 6.3 | Cierre del proyecto | Gestión | Renzo | Cierre administrativo de contratos con proveedores y cuadrilla, archivo del proyecto y lecciones aprendidas. | Contratos cerrados e informe de lecciones aprendidas emitido. |
+
+> Fuente: Tarea 3 — EDT y estimaciones, Equipo 4, versión final del grupo (858 h, 48 días hábiles, 01/03/2027 a 10/05/2027).
 
 ---
 
-*Área de Posgrado · Gestión de Proyectos · Especializaciones FIUNER · 2026 · Equipo 4*
+*Área de Posgrado · Gestión de Proyectos · Especializaciones FIUNER · 2026*
