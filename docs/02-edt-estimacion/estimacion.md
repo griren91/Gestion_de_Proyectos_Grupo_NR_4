@@ -1,150 +1,190 @@
-# 🎲 Estimación
+# Tarea 3 — Estimación
+## Sistema integrado de detección de intrusiones y videovigilancia perimetral · Equipo 4 · Gestión de Proyectos · FIUNER
 
-> **Técnica principal:** Delphi · **Rondas realizadas:** 2 · **Estimadores:** Renzo (Líder / Gestión), Gabriel S. (Infraestructura), Lucía (Sistemas), Gabriel N. (Detección)
-> **Unidad:** horas-persona del equipo integrador. No incluye horas de la cuadrilla externa ni horas de la Central de Monitoreo, que se supervisan pero no se estiman por Delphi.
-> **Supuesto de dedicación:** 3 h/día hábil por integrante (15 h/semana, dentro del rango 10 a 15 h de la Tarea 2). 5 días hábiles por semana, fines de semana excluidos.
+> **Fuente:** Documento `Tarea3_EDT_y_estimaciones_G4_vf.docx`.
+> **Técnica principal:** Delphi en 2 rondas · **Control:** PERT (tres puntos) · **Estimadores:** Gabriel S., Lucía y Gabriel N. · **Coordinador:** Renzo (no estima).
+> **Estimación final:** **858 horas**. **Costos:** no se incluyen (punto opcional de la consigna, no realizado).
 
-## Ronda 1 — Estimación individual anónima
+## 3.1 Técnicas consideradas
 
-Cada estimador estimó por su cuenta, sin ver las estimaciones de los demás, sobre la base del diccionario de la EDT. La tabla muestra el esfuerzo en horas-persona.
+Antes de estimar comparamos cuatro técnicas y elegimos la que mejor se ajusta al proyecto:
 
-| ID | Paquete | Renzo (hs) | Gabriel S. (hs) | Lucía (hs) | Gabriel N. (hs) | Promedio R1 | Delta R1 |
-|----|---------|-----------:|---------------:|----------:|--------------:|------------:|---------:|
-| 6.1 | Planificación y línea base | 15 | 24 | 17 | 21 | 19.2 | 9 |
-| 1.1 | Relevamiento planimétrico y planos de tendido | 23 | 38 | 27 | 34 | 30.5 | 15 |
-| 1.2 | Diseño de red, cálculo UPS y dimensionamiento NVR | 31 | 48 | 35 | 43 | 39.2 | 17 |
-| 1.3 | Cotizaciones, pliego de montaje y órdenes de compra | 20 | 41 | 28 | 37 | 31.5 | 21 |
-| 1.4 | Coordinación previa protocolo con Central de Monitoreo | 9 | 15 | 11 | 13 | 12.0 | 6 |
-| 2.1 | Zanjeo y canalizaciones (cuadrilla externa) | 8 | 17 | 11 | 15 | 12.8 | 9 |
-| 2.2 | Tendido de cableado UV | 12 | 19 | 13 | 17 | 15.2 | 7 |
-| 2.3 | Montaje de postes, cámaras y sensores | 15 | 24 | 17 | 22 | 19.5 | 9 |
-| 2.4 | Instalación rack y UPS + prueba ping 100% | 14 | 23 | 16 | 21 | 18.5 | 9 |
-| 3.1 | Configuración NVR/VMS y matriz usuarios app (Ley 25.326) | 26 | 42 | 30 | 38 | 34.0 | 16 |
-| 3.2 | Calibración iterativa de sensores en terreno | 31 | 62 | 41 | 55 | 47.2 | 31 |
-| 3.3 | Pruebas de disparo con Central + 7 días sin falsas alarmas | 14 | 29 | 19 | 26 | 22.0 | 15 |
-| 4.1 | Planos conforme a obra | 15 | 23 | 17 | 21 | 19.0 | 8 |
-| 4.2 | Manual de usuario y guía administrativa | 16 | 26 | 18 | 23 | 20.8 | 10 |
-| 4.3 | Capacitación sereno y administración + actas | 13 | 20 | 15 | 18 | 16.5 | 7 |
-| 5.1 | Simulacros diurno y nocturno de intrusión | 14 | 22 | 16 | 20 | 18.0 | 8 |
-| 5.2 | Prueba de corte y autonomía real UPS 8h | 9 | 15 | 10 | 13 | 11.8 | 6 |
-| 5.3 | Acta de Recepción Definitiva y garantía 12 meses | 8 | 12 | 9 | 11 | 10.0 | 4 |
-| 6.2 | Seguimiento y control + gestión de riesgos | 24 | 38 | 28 | 34 | 31.0 | 14 |
-| 6.3 | Cierre administrativo del proyecto | 5 | 8 | 6 | 7 | 6.5 | 3 |
-| **TOTAL** | | | | | | **435.2** | |
+| Técnica | Cómo funciona | ¿La usamos? |
+| --- | --- | --- |
+| Delphi | Varios expertos estiman en forma anónima; un coordinador comparte los resultados y se repiten las rondas hasta llegar a consenso. | Sí, como técnica principal: da horas absolutas, que necesitamos para presupuestar y para calcular duraciones. |
+| PERT (tres puntos) | Se estiman un valor optimista, uno más probable y uno pesimista, y se combinan: (O + 4M + P) / 6. | Sí, como control en los paquetes más inciertos y para el plazo de entrega de los proveedores. |
+| Planning poker | Versión ágil de Delphi: el equipo vota con cartas de una serie tipo Fibonacci, en puntos relativos, y discute las diferencias. | No: estima esfuerzo relativo por sprint, y nuestra obra física se planifica con horas y presupuesto cerrado. |
+| T-shirt sizing | Se asignan tallas (S, M, L, XL) según el esfuerzo relativo; sirve para planificación rápida de alto nivel. | No como estimación final: no da horas. Solo sirvió para ordenar mentalmente los paquetes antes de la ronda 1. |
 
-> **Delta:** diferencia entre la estimación máxima y la mínima. Umbral definido por el equipo: si Delta > 10 h o > 30% del promedio, se discute y se hace otra ronda. En Ronda 1, 9 de 20 paquetes superaron el umbral, por eso fue necesaria la Ronda 2.
+## 3.2 Procedimiento Delphi
 
-## Discusión entre rondas
+- **Coordinador:** Renzo, líder del proyecto. Preparó la EDT y el formulario, recibió las estimaciones, calculó promedios y deltas y moderó la discusión. No estimó, para no influir en los demás.
+- **Estimadores (3):** Gabriel S., Lucía y Gabriel N. Cada uno estimó todos los paquetes, no solo los propios. En las tablas aparecen como Est. 1, 2 y 3, sin nombre, para mantener el anonimato.
+- **Unidad:** horas de esfuerzo de la persona o del grupo que ejecuta el paquete. En la obra de la cuadrilla, son horas-operario.
+- **Criterio de convergencia:** cuando el delta (diferencia entre la estimación máxima y la mínima) supera el 25 % del promedio, los estimadores que presentan los valores extremos explican los supuestos utilizados. A partir de esa discusión se revisan las estimaciones y se realiza una segunda ronda. En la segunda ronda, todos los paquetes quedaron por debajo del umbral establecido.
+- **Estimación final:** se adopta el promedio de los valores obtenidos en la segunda ronda.
 
-La discusión fue facilitada por Renzo, sin atribuir estimaciones a personas, solo con argumentos y supuestos. Los 4 puntos que explicaron casi toda la dispersión fueron:
+## 3.3 Ronda 1
 
-1. **3.2 Calibración iterativa (Delta R1 = 31 h, la mayor).** Gabriel N. había supuesto 2 iteraciones por sector. Lucía y Gabriel S. argumentaron que la rotación de maquinaria y las sombras cambiantes en el patio obligan a prever 3 a 4 iteraciones, más un registro por iteración. Se acordó estimar con 3 iteraciones + 1 de repaso por sector crítico.
-2. **1.3 Cotizaciones y compras (Delta R1 = 21 h).** La dispersión venía de confundir esfuerzo con espera. Se aclaró: el esfuerzo es 30 h de trabajo (pedir, comparar, pliego, OC), la espera de 5 días de respuesta de proveedores está dentro de la duración de 10 días pero no suma esfuerzo. Sin ese acuerdo, unos estimaban solo trabajo y otros trabajo + espera.
-3. **2.1 Zanjeo y canalizaciones (Delta R1 = 9 h en supervisión).** Unos estimaban supervisión continua y otros supervisión por hitos. Se acordó supervisión por hitos: inicio, 50% y cierre de cada tramo, más acta. El esfuerzo del equipo es supervisión, no el zanjeo en sí, que lo hace la cuadrilla a tiempo completo.
-4. **1.2 Diseño red, UPS y NVR (Delta R1 = 17 h).** Se había duplicado parte del cálculo UPS con 1.1. Se acordó: 1.1 releva y define ubicación, 1.2 calcula y dimensiona. Sin duplicación, la estimación bajó y convergió.
+En el documento original, en rojo los paquetes que superaron el umbral del 25 %.
 
-Otros supuestos explicitados: la app se configura con la matriz de usuarios ya definida en 1.2, no se diseña desde cero en 3.1; la prueba de 7 días en 3.3 es observación, no 7 días de trabajo continuo; y la capacitación en 4.3 es 2 jornadas, no 4.
+| ID | Paquete | Est. 1 (h) | Est. 2 (h) | Est. 3 (h) | Promedio R1 | Delta R1 | Delta / prom. |
+| --- | --- | :---: | :---: | :---: | :---: | :---: | :---: |
+| 1.1 | Relevamiento del predio y zonas críticas | 16 | 24 | 12 | 17,3 | 12 | 69 % |
+| 1.2 | Diseño de detección y cobertura de cámaras | 20 | 32 | 24 | 25,3 | 12 | 47 % |
+| 1.3 | Ingeniería de red, canalizaciones y energía | 32 | 16 | 24 | 24 | 16 | 67 % |
+| 1.4 | Confirmación de versión y compra de licencias | 8 | 12 | 8 | 9,3 | 4 | 43 % |
+| 1.5 | Coordinación técnica con la central de monitoreo | 8 | 16 | 12 | 12 | 8 | 67 % |
+| 1.6 | Pliego de montaje y contratación de la cuadrilla | 16 | 12 | 24 | 17,3 | 12 | 69 % |
+| 1.7 | Presupuesto final, aprobación y órdenes de compra | 16 | 16 | 12 | 14,7 | 4 | 27 % |
+| 2.1 | Recepción de equipos y licencias | 16 | 24 | 12 | 17,3 | 12 | 69 % |
+| 2.2 | Zanjeo y canalizaciones | 160 | 240 | 176 | 192 | 80 | 42 % |
+| 2.3 | Tendido de cableado exterior | 128 | 112 | 144 | 128 | 32 | 25 % |
+| 2.4 | Postes y montaje de cámaras y sensores | 128 | 192 | 160 | 160 | 64 | 40 % |
+| 2.5 | Instalación de rack y UPS | 8 | 12 | 6 | 8,7 | 6 | 69 % |
+| 2.6 | Conexionado y prueba de comunicación | 12 | 24 | 16 | 17,3 | 12 | 69 % |
+| 3.1 | Instalación y activación del VMS | 16 | 24 | 16 | 18,7 | 8 | 43 % |
+| 3.2 | Configuración de app y perfiles de usuario | 16 | 16 | 12 | 14,7 | 4 | 27 % |
+| 3.3 | Calibración de sensores en sitio | 24 | 44 | 32 | 33,3 | 20 | 60 % |
+| 3.4 | Integración y pruebas con la central | 16 | 16 | 24 | 18,7 | 8 | 43 % |
+| 3.5 | Observación de 7 días corridos sin falsas alarmas | 8 | 14 | 10 | 10,7 | 6 | 56 % |
+| 4.1 | Planos conforme a obra | 8 | 12 | 6 | 8,7 | 6 | 69 % |
+| 4.2 | Manuales de usuario y guía administrativa | 16 | 24 | 16 | 18,7 | 8 | 43 % |
+| 4.3 | Capacitación de usuarios | 16 | 16 | 12 | 14,7 | 4 | 27 % |
+| 5.1 | Simulacro de intrusión y prueba de autonomía | 16 | 24 | 16 | 18,7 | 8 | 43 % |
+| 5.2 | Acta de recepción, garantía y traspaso de soporte | 8 | 8 | 8 | 8 | 0 | 0 % |
+| 6.1 | Planificación del proyecto | 12 | 24 | 16 | 17,3 | 12 | 69 % |
+| 6.2 | Seguimiento y control | 32 | 64 | 48 | 48 | 32 | 67 % |
+| 6.3 | Cierre del proyecto | 8 | 12 | 8 | 9,3 | 4 | 43 % |
+| **Total** | | | | | **882,7** | | |
 
-## Ronda 2 — Re-estimación con información del grupo
+## 3.4 Discusión entre rondas
 
-| ID | Paquete | Renzo (hs) | Gabriel S. (hs) | Lucía (hs) | Gabriel N. (hs) | Promedio R2 | Delta R2 | Estimación final |
-|----|---------|-----------:|---------------:|----------:|--------------:|------------:|---------:|-----------------:|
-| 6.1 | Planificación y línea base | 18 | 19 | 19 | 19 | 18.8 | 1 | **18** |
-| 1.1 | Relevamiento planimétrico y planos de tendido | 30 | 32 | 31 | 32 | 31.2 | 2 | **30** |
-| 1.2 | Diseño de red, cálculo UPS y dimensionamiento NVR | 35 | 37 | 36 | 36 | 36.0 | 2 | **36** |
-| 1.3 | Cotizaciones, pliego de montaje y órdenes de compra | 28 | 32 | 29 | 31 | 30.0 | 4 | **30** |
-| 1.4 | Coordinación previa protocolo con Central de Monitoreo | 11 | 12 | 12 | 12 | 11.8 | 1 | **12** |
-| 2.1 | Zanjeo y canalizaciones (cuadrilla externa) | 11 | 13 | 12 | 12 | 12.0 | 2 | **12** |
-| 2.2 | Tendido de cableado UV | 14 | 15 | 15 | 15 | 14.8 | 1 | **15** |
-| 2.3 | Montaje de postes, cámaras y sensores | 17 | 19 | 18 | 18 | 18.0 | 2 | **18** |
-| 2.4 | Instalación rack y UPS + prueba ping 100% | 18 | 19 | 18 | 19 | 18.5 | 1 | **18** |
-| 3.1 | Configuración NVR/VMS y matriz usuarios app (Ley 25.326) | 33 | 35 | 34 | 35 | 34.2 | 2 | **33** |
-| 3.2 | Calibración iterativa de sensores en terreno | 43 | 48 | 44 | 46 | 45.2 | 5 | **45** |
-| 3.3 | Pruebas de disparo con Central + 7 días sin falsas alarmas | 20 | 22 | 21 | 22 | 21.2 | 2 | **21** |
-| 4.1 | Planos conforme a obra | 18 | 19 | 19 | 19 | 18.8 | 1 | **18** |
-| 4.2 | Manual de usuario y guía administrativa | 20 | 21 | 20 | 21 | 20.5 | 1 | **21** |
-| 4.3 | Capacitación sereno y administración + actas | 14 | 15 | 15 | 15 | 14.8 | 1 | **15** |
-| 5.1 | Simulacros diurno y nocturno de intrusión | 17 | 18 | 17 | 18 | 17.5 | 1 | **18** |
-| 5.2 | Prueba de corte y autonomía real UPS 8h | 12 | 12 | 12 | 12 | 12.0 | 0 | **12** |
-| 5.3 | Acta de Recepción Definitiva y garantía 12 meses | 9 | 9 | 9 | 9 | 9.0 | 0 | **9** |
-| 6.2 | Seguimiento y control + gestión de riesgos | 29 | 32 | 30 | 31 | 30.5 | 3 | **30** |
-| 6.3 | Cierre administrativo del proyecto | 6 | 6 | 6 | 6 | 6.0 | 0 | **6** |
-| **TOTAL** | | | | | | **420.8** | | **417 hs** |
+A partir de los resultados de la primera ronda, se identificaron diferencias en la interpretación del alcance y del esfuerzo requerido para determinados paquetes de trabajo. Los estimadores revisaron los supuestos considerados, teniendo en cuenta las características del predio, la solución tecnológica propuesta y las condiciones de ejecución del proyecto.
 
-**Convergencia lograda.** En Ronda 2 ningún paquete supera el umbral de Delta > 10 h, salvo 3.2 que queda en 5 h y se acepta por su incertidumbre ambiental. El equipo adopta como estimación final el valor consensuado, que en todos los casos está dentro de 1 h del promedio de Ronda 2. No se necesitó una tercera ronda.
+Los principales aspectos considerados para ajustar las estimaciones fueron:
+
+- **1.1 Relevamiento:** las diferencias se relacionaron con el nivel de detalle considerado. Se acordó contemplar no solo el recorrido del predio, sino también la medición de distancias, identificación de puntos de energía y conectividad, registro fotográfico y validación de las zonas críticas con el cliente.
+- **1.3 Ingeniería de red:** las diferencias se relacionaron con la posibilidad de rediseñar el trazado una vez terminado el relevamiento. Se acordó que el relevamiento ya fija las zonas críticas y los recorridos, por lo que la ingeniería parte de esa base sin rediseño, e incluye el cálculo de autonomía de la UPS.
+- **1.5 y 1.6 Coordinación con la central y contratación de la cuadrilla:** se consideraron diferentes niveles de intervención en la coordinación técnica y administrativa. Se acordó incluir las reuniones de coordinación, validación de protocolos de comunicación, elaboración del pliego de montaje y gestión de la contratación de la cuadrilla externa.
+- **1.7 y 2.1 Presupuesto, compras y recepción:** las diferencias estuvieron relacionadas con el alcance de las tareas de seguimiento y gestión de proveedores. Se distinguió el esfuerzo administrativo de realizar las compras y coordinar las entregas del plazo de provisión de los equipos y licencias, que depende de terceros.
+- **2.2 y 2.4 Zanjeo y montaje:** las diferencias estuvieron relacionadas con el tipo de suelo, la longitud de las zanjas y la cantidad de postes considerados por cada estimador. Se acordó usar los metros medidos en el relevamiento y la cantidad de postes del plano de cobertura, y sumar un día de margen por lluvia dentro del zanjeo.
+- **2.5 y 2.6 Rack, UPS y pruebas de comunicación:** las estimaciones variaban según el nivel de complejidad contemplado. Se acordó considerar el montaje físico del rack y la UPS, el conexionado de los equipos y las pruebas de comunicación de los dispositivos instalados.
+- **3.2 y 3.4 Configuración de la aplicación e integración con la central:** se revisó el alcance de la configuración de perfiles de usuario y permisos, así como las pruebas de comunicación con la central. Se consideró que el uso de software comercial conocido por el equipo y la asistencia del proveedor reducen la necesidad de desarrollo y configuración desde cero.
+- **3.3 Calibración:** las diferencias se relacionaron con la cantidad de ciclos de prueba y ajuste considerados por las condiciones climáticas y el movimiento de maquinaria. Se acordó planificar dos ciclos completos de ajuste, dado que el equipo ya conoce el software de calibración del proveedor; un ciclo adicional quedaría cubierto por la reserva de la fase iterativa.
+- **3.5 Observación:** las diferencias se relacionaron con el esfuerzo de supervisión considerado durante el período de observación. Se acordó mantener los siete días corridos como condición de aceptación y estimar por separado las horas de seguimiento y control necesarias durante ese período.
+- **4.1, 4.2 y 4.3 Documentación y capacitación:** se revisó el nivel de detalle esperado para los planos conforme a obra, los manuales de usuario y la guía administrativa. También se consideró la preparación y realización de las capacitaciones destinadas al personal de la empresa, incluyendo al sereno y a los responsables de administración y seguridad.
+- **5.1 Simulacro y prueba de autonomía:** se contemplaron tanto las pruebas de detección y notificación de intrusiones como la verificación de la autonomía de la UPS mediante un corte controlado de alimentación eléctrica. Se acordó considerar la participación de los responsables técnicos necesarios para realizar y documentar las pruebas.
+- **6.1 y 6.3 Planificación y cierre:** las diferencias respondieron al alcance de las actividades de gestión consideradas. Se acordó incluir en la planificación la organización inicial, coordinación de recursos y definición del cronograma, y en el cierre la documentación final, el cierre administrativo de contratos y la entrega de las lecciones aprendidas.
+- **6.2 Seguimiento y control:** se acordó considerar aproximadamente una hora diaria de dedicación del líder del proyecto durante la ejecución, incluyendo la coordinación con proveedores, contratistas y demás participantes.
+
+A partir de estas revisiones se realizó la segunda ronda, en la que se alcanzó una mayor convergencia. Todos los paquetes quedaron por debajo del umbral del 25 % establecido como criterio de convergencia. Se adoptó el promedio de la segunda ronda como estimación final de esfuerzo.
+
+## 3.5 Ronda 2 y estimación final
+
+| ID | Paquete | Est. 1 (h) | Est. 2 (h) | Est. 3 (h) | Promedio R2 | Delta R2 | Delta / prom. | Final (h) |
+| --- | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 1.1 | Relevamiento del predio y zonas críticas | 16 | 16 | 16 | 16 | 0 | 0 % | 16 |
+| 1.2 | Diseño de detección y cobertura de cámaras | 24 | 24 | 24 | 24 | 0 | 0 % | 24 |
+| 1.3 | Ingeniería de red, canalizaciones y energía | 24 | 26 | 22 | 24 | 4 | 17 % | 24 |
+| 1.4 | Confirmación de versión y compra de licencias | 8 | 8 | 8 | 8 | 0 | 0 % | 8 |
+| 1.5 | Coordinación técnica con la central de monitoreo | 8 | 8 | 8 | 8 | 0 | 0 % | 8 |
+| 1.6 | Pliego de montaje y contratación de la cuadrilla | 16 | 16 | 16 | 16 | 0 | 0 % | 16 |
+| 1.7 | Presupuesto final, aprobación y órdenes de compra | 16 | 16 | 16 | 16 | 0 | 0 % | 16 |
+| 2.1 | Recepción de equipos y licencias | 16 | 16 | 16 | 16 | 0 | 0 % | 16 |
+| 2.2 | Zanjeo y canalizaciones | 192 | 200 | 184 | 192 | 16 | 8 % | 192 |
+| 2.3 | Tendido de cableado exterior | 128 | 128 | 128 | 128 | 0 | 0 % | 128 |
+| 2.4 | Postes y montaje de cámaras y sensores | 160 | 168 | 152 | 160 | 16 | 10 % | 160 |
+| 2.5 | Instalación de rack y UPS | 8 | 8 | 8 | 8 | 0 | 0 % | 8 |
+| 2.6 | Conexionado y prueba de comunicación | 16 | 16 | 16 | 16 | 0 | 0 % | 16 |
+| 3.1 | Instalación y activación del VMS | 16 | 16 | 16 | 16 | 0 | 0 % | 16 |
+| 3.2 | Configuración de app y perfiles de usuario | 16 | 16 | 16 | 16 | 0 | 0 % | 16 |
+| 3.3 | Calibración de sensores en sitio | 32 | 34 | 30 | 32 | 4 | 13 % | 32 |
+| 3.4 | Integración y pruebas con la central | 16 | 16 | 16 | 16 | 0 | 0 % | 16 |
+| 3.5 | Observación de 7 días corridos sin falsas alarmas | 10 | 10 | 10 | 10 | 0 | 0 % | 10 |
+| 4.1 | Planos conforme a obra | 8 | 8 | 8 | 8 | 0 | 0 % | 8 |
+| 4.2 | Manuales de usuario y guía administrativa | 16 | 16 | 16 | 16 | 0 | 0 % | 16 |
+| 4.3 | Capacitación de usuarios | 16 | 16 | 16 | 16 | 0 | 0 % | 16 |
+| 5.1 | Simulacro de intrusión y prueba de autonomía | 16 | 16 | 16 | 16 | 0 | 0 % | 16 |
+| 5.2 | Acta de recepción, garantía y traspaso de soporte | 8 | 8 | 8 | 8 | 0 | 0 % | 8 |
+| 6.1 | Planificación del proyecto | 16 | 16 | 16 | 16 | 0 | 0 % | 16 |
+| 6.2 | Seguimiento y control | 48 | 48 | 48 | 48 | 0 | 0 % | 48 |
+| 6.3 | Cierre del proyecto | 8 | 8 | 8 | 8 | 0 | 0 % | 8 |
+| **Total** | | | | | | | | **858** |
+
 
 ### Totales por entregable
 
-| Entregable | Esfuerzo (hs) | % del total |
-|------------|--------------:|-----------:|
-| E1 | 108 | 25.9% |
-| E2 | 63 | 15.1% |
-| E3 | 99 | 23.7% |
-| E4 | 54 | 12.9% |
-| E5 | 39 | 9.4% |
-| Gestión | 54 | 12.9% |
-| **TOTAL** | **417** | **100%** |
+| Entregable | Esfuerzo (h) | % del total |
+| --- | :---: | :---: |
+| E1 Ingeniería | 112 | 13,1 % |
+| E2 Infraestructura | 520 | 60,6 % |
+| E3 Sistema lógico | 90 | 10,5 % |
+| E4 Documentación | 40 | 4,7 % |
+| E5 Recepción | 24 | 2,8 % |
+| Gestión (6.1 a 6.3) | 72 | 8,4 % |
+| **Total** | **858** | **100 %** |
 
-## Conversión a duración
+> E2 concentra el 60,6 % porque incluye las 480 h-operario de la cuadrilla externa en 2.2 (192 h), 2.3 (128 h) y 2.4 (160 h). Sin la cuadrilla, el esfuerzo del equipo integrador es de 378 h.
 
-> **Fórmula:** Duración (días hábiles) = Esfuerzo (hs) / (Recursos × 3 h/día por persona)
-> **Excepciones explicitadas, no errores de cálculo:**
->
-> - **2.1, 2.2, 2.3:** la duración la manda la cuadrilla externa a tiempo completo (8, 6 y 7 días). El esfuerzo en la tabla es solo supervisión del equipo.
-> - **1.3:** 10 días incluyen 5 días de espera de cotizaciones. El esfuerzo es 30 h de trabajo, la espera no suma esfuerzo.
-> - **3.3:** 7 días son calendario de observación (7 días corridos sin falsas alarmas). El esfuerzo es 21 h de monitoreo y registro repartidas en esos 7 días.
-> - **6.2:** 86 días son paralelos a todo el proyecto (seguimiento semanal). No suma duración al camino crítico.
+## 3.6 Control con PERT
 
-| ID | Paquete | Esfuerzo (hs) | Recursos (personas) | Dedicación | Duración (días hábiles) | Tipo de duración |
-|----|---------|-------------:|-------------------:|-----------:|-------------------------:|------------------|
-| 6.1 | Planificación y línea base | 18 | 2 | 3 h/día | 3 | Esfuerzo |
-| 1.1 | Relevamiento planimétrico y planos de tendido | 30 | 2 | 3 h/día | 5 | Esfuerzo |
-| 1.2 | Diseño de red, cálculo UPS y dimensionamiento NVR | 36 | 2 | 3 h/día | 6 | Esfuerzo |
-| 1.3 | Cotizaciones, pliego de montaje y órdenes de compra | 30 | 1 | 3 h/día | 10 | Esfuerzo + 5 d espera |
-| 1.4 | Coordinación previa protocolo con Central de Monitoreo | 12 | 1 | 3 h/día | 4 | Esfuerzo |
-| 2.1 | Zanjeo y canalizaciones (cuadrilla externa) | 12 (supervisión) | 1 | 3 h/día | 8 | Cuadrilla a tiempo completo |
-| 2.2 | Tendido de cableado UV | 15 (supervisión) | 1 | 3 h/día | 6 | Cuadrilla a tiempo completo |
-| 2.3 | Montaje de postes, cámaras y sensores | 18 (supervisión) | 1 | 3 h/día | 7 | Cuadrilla a tiempo completo |
-| 2.4 | Instalación rack y UPS + prueba ping 100% | 18 | 2 | 3 h/día | 3 | Esfuerzo |
-| 3.1 | Configuración NVR/VMS y matriz usuarios app (Ley 25.326) | 33 | 2 | 3 h/día | 6 | Esfuerzo |
-| 3.2 | Calibración iterativa de sensores en terreno | 45 | 2 | 3 h/día | 8 | Esfuerzo |
-| 3.3 | Pruebas de disparo con Central + 7 días sin falsas alarmas | 21 | 1 | 3 h/día | 7 | Calendario: 7 días observación |
-| 4.1 | Planos conforme a obra | 18 | 1 | 3 h/día | 6 | Esfuerzo |
-| 4.2 | Manual de usuario y guía administrativa | 21 | 1 | 3 h/día | 7 | Esfuerzo |
-| 4.3 | Capacitación sereno y administración + actas | 15 | 1 | 3 h/día | 5 | Esfuerzo |
-| 5.1 | Simulacros diurno y nocturno de intrusión | 18 | 2 | 3 h/día | 3 | Esfuerzo |
-| 5.2 | Prueba de corte y autonomía real UPS 8h | 12 | 2 | 3 h/día | 2 | Esfuerzo |
-| 5.3 | Acta de Recepción Definitiva y garantía 12 meses | 9 | 1 | 3 h/día | 3 | Esfuerzo |
-| 6.2 | Seguimiento y control + gestión de riesgos | 30 | 1 | 3 h/día | 86 (paralelo) | Paralelo, no suma al CPM |
-| 6.3 | Cierre administrativo del proyecto | 6 | 1 | 3 h/día | 2 | Esfuerzo |
 
-**Verificación:** 417 h totales / (4 personas × 15 h/semana) = 6,95 semanas de capacidad pura. El proyecto dura 86 días hábiles (17,2 semanas) porque gran parte del trabajo es secuencial, hay esperas de proveedores y observación de 7 días, y no todos trabajan en todos los paquetes a la vez. La diferencia entre capacidad y duración es esperable y no es holgura desperdiciada.
+Usamos la estimación de tres puntos en los dos paquetes más inciertos y en el plazo de los proveedores, que no depende del esfuerzo del equipo:
 
-## Otras técnicas (verificación con tres puntos)
+| Paquete | Unidad | Optimista (O) | Más probable (M) | Pesimista (P) | (O + 4M + P) / 6 | Uso |
+| --- | --- | :---: | :---: | :---: | :---: | --- |
+| 2.1 Recepción de equipos y licencias | días hábiles | 10 | 15 | 26 | 16,0 | Duración adoptada: 16 días |
+| 2.2 Zanjeo y canalizaciones | horas | 160 | 192 | 256 | 197,3 | Control: Delphi dio 192 h |
+| 3.3 Calibración de sensores en sitio | horas | 24 | 32 | 44 | 32,7 | Control: Delphi dio 32 h |
 
-Como verificación, se aplicó estimación por tres puntos a los 2 paquetes con mayor incertidumbre. No reemplaza a Delphi, solo confirma que el valor Delphi está dentro del rango razonable.
+En los dos paquetes de control, PERT da valores muy cercanos a los de Delphi (diferencias menores al 3 %), así que mantuvimos los de Delphi pero lo contrastamos con el PERT.
 
-| Paquete | Optimista (O) | Más probable (M) | Pesimista (P) | Estimación (O + 4M + P) / 6 | Delphi final |
-|---------|:-------------:|:----------------:|:-------------:|:---------------------------:|:------------:|
-| 3.2 Calibración iterativa | 32 | 44 | 62 | 45,0 | 45 |
-| 1.3 Cotizaciones y compras | 22 | 30 | 40 | 30,3 | 30 |
+Ejemplo de cálculo, 2.1: (10 + 4×15 + 26) / 6 = 96 / 6 = 16 días.
 
-En ambos casos la estimación PERT coincide con Delphi dentro de 1 h, lo que refuerza la credibilidad del consenso.
+## 3.7 Conversión a duración
 
-## Estimación de costos (referencial, fuera de Delphi)
+**Fórmula:** Duración = Esfuerzo / (Recursos × Dedicación × 8 horas por día). Los recursos son los de la estructura del equipo definida en la Tarea 2, más la cuadrilla externa.
 
-El costo de hardware, cuadrilla y licencias se define con cotizaciones firmes en 1.3. Acá se estima solo el costo interno de mano de obra del equipo integrador, a modo referencial.
+Tres paquetes no salen de la fórmula y se explican aparte:
 
-| Concepto | Esfuerzo / cantidad | Costo unitario (referencial) | Costo total |
-|----------|:-------------------:|:---------------------------:|------------:|
-| Mano de obra equipo integrador | 417 hs | $ 18.000 / h | $ 7.506.000 |
-| Materiales / hardware | Según cotización en 1.3 | A confirmar con OC | A confirmar |
-| Servicios / licencias (VMS/app) | Según cotización en 1.3 | A confirmar con OC | A confirmar |
-| Reserva de contingencia (10% sobre mano de obra) | 10% | | $ 750.600 |
-| **TOTAL mano de obra + contingencia** | | | **$ 8.256.600** |
+- **2.1 Recepción de equipos y licencias:** el plazo lo fijan los proveedores; el esfuerzo de 16 h es solo el seguimiento.
+- **3.5 Período de observación:** son 7 días corridos fijados por el criterio de aceptación de la Tarea 2.
+- **6.2 Seguimiento y control:** dura toda la ejecución; con 48 h repartidas en 45 días, la dedicación del líder es de alrededor del 13 %.
 
-> Valor hora a confirmar por Gerencia. No incluye hardware, cuadrilla externa ni abono de monitoreo (exclusión del alcance). Si el valor hora cambia, el total se recalcula sin cambiar el esfuerzo ni la duración.
+| ID | Paquete | Esfuerzo (h) | Recursos | Cant. | Dedicación | Duración calculada (d) | Duración adoptada (d) |
+| --- | --- | :---: | --- | :---: | :---: | --- | :---: |
+| 1.1 | Relevamiento del predio y zonas críticas | 16 | Gabriel S. y Gabriel N. | 2 | 100 % | 1 | 1 |
+| 1.2 | Diseño de detección y cobertura de cámaras | 24 | Gabriel N. | 1 | 100 % | 3 | 3 |
+| 1.3 | Ingeniería de red, canalizaciones y energía | 24 | Gabriel S. | 1 | 100 % | 3 | 3 |
+| 1.4 | Confirmación de versión y compra de licencias | 8 | Lucía | 1 | 100 % | 1 | 1 |
+| 1.5 | Coordinación técnica con la central de monitoreo | 8 | Gabriel N. | 1 | 100 % | 1 | 1 |
+| 1.6 | Pliego de montaje y contratación de la cuadrilla | 16 | Gabriel S. | 1 | 100 % | 2 | 2 |
+| 1.7 | Presupuesto final, aprobación y órdenes de compra | 16 | Renzo | 1 | 100 % | 2 | 2 |
+| 2.1 | Recepción de equipos y licencias | 16 | Renzo (seguimiento) | 1 | — | Plazo del proveedor (PERT) | 16 |
+| 2.2 | Zanjeo y canalizaciones | 192 | Cuadrilla externa (4) | 4 | 100 % | 6 | 6 |
+| 2.3 | Tendido de cableado exterior | 128 | Cuadrilla externa (4) | 4 | 100 % | 4 | 4 |
+| 2.4 | Postes y montaje de cámaras y sensores | 160 | Cuadrilla externa (4) | 4 | 100 % | 5 | 5 |
+| 2.5 | Instalación de rack y UPS | 8 | Gabriel S. | 1 | 100 % | 1 | 1 |
+| 2.6 | Conexionado y prueba de comunicación | 16 | Gabriel S. | 1 | 100 % | 2 | 2 |
+| 3.1 | Instalación y activación del VMS | 16 | Lucía (con soporte del proveedor) | 1 | 100 % | 2 | 2 |
+| 3.2 | Configuración de app y perfiles de usuario | 16 | Lucía | 1 | 100 % | 2 | 2 |
+| 3.3 | Calibración de sensores en sitio | 32 | Gabriel N. | 1 | 100 % | 4 | 4 |
+| 3.4 | Integración y pruebas con la central | 16 | Gabriel N. | 1 | 100 % | 2 | 2 |
+| 3.5 | Observación de 7 días corridos sin falsas alarmas | 10 | Gabriel N. (control diario) | 1 | 25 % | 7 días corridos = 5 hábiles | 5 |
+| 4.1 | Planos conforme a obra | 8 | Gabriel S. | 1 | 100 % | 1 | 1 |
+| 4.2 | Manuales de usuario y guía administrativa | 16 | Lucía | 1 | 100 % | 2 | 2 |
+| 4.3 | Capacitación de usuarios | 16 | Lucía | 1 | 100 % | 2 | 2 |
+| 5.1 | Simulacro de intrusión y prueba de autonomía | 16 | Gabriel N. y Gabriel S. | 2 | 100 % | 1 | 1 |
+| 5.2 | Acta de recepción, garantía y traspaso de soporte | 8 | Renzo | 1 | 100 % | 1 | 1 |
+| 6.1 | Planificación del proyecto | 16 | Renzo | 1 | 100 % | 2 | 2 |
+| 6.2 | Seguimiento y control | 48 | Renzo | 1 | 13 % | Toda la ejecución (de 6.1 a 5.2) | 45 |
+| 6.3 | Cierre del proyecto | 8 | Renzo | 1 | 100 % | 1 | 1 |
+
+**Verificación:** 858 h totales. E2 (520 h) es el 60,6 % por la cuadrilla. El resto del equipo (378 h) se reparte en ingeniería (112 h), sistema lógico (90 h), gestión (72 h), documentación (40 h) y recepción (24 h). La duración de 48 días hábiles no sale de dividir 858 / 32, porque gran parte del trabajo es secuencial, hay 16 días de espera de proveedores y 5 días hábiles de observación, y no todos trabajan en todos los paquetes a la vez.
+
+> **Estimación de costos:** no se incluye en esta entrega (punto opcional de la consigna).
 
 ---
 
-*Área de Posgrado · Gestión de Proyectos · Especializaciones FIUNER · 2026 · Equipo 4*
+*Área de Posgrado · Gestión de Proyectos · Especializaciones FIUNER · 2026*
